@@ -1,11 +1,13 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("<h1>Главная страница</h1>")
+    return render(request, 'main/index.html')  # Указываем полный путь
 
-def data(request):
-    return HttpResponse("<h1>Разное содержимое</h1>")
+def about(request):
+    return render(request, 'main/about.html')
 
-def test(request):
-    return HttpResponse("<h1>Другое разное содержимое</h1>")
+def gallery(request):
+    return render(request, 'main/gallery.html')
+
+def contact(request):
+    return render(request, 'main/contact.html')
